@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Redirect</title>
+    <script>
+        // Define the URLs for the three game versions
+        const games = [
+            "https://www.archidekt.com",
+            "https://www.google.com",
+            "https://www.bing.com"
+        ];
+
+        // Randomly select one game
+        const randomGame = games[Math.floor(Math.random() * games.length)];
+
+        // Redirect to the selected game
+        window.location.href = randomGame;
+    </script>
+</head>
+<body>
+    <p>Redirecting you to the game... If it takes too long, <a id="manualRedirect" href="#">click here</a>.</p>
+    <script>
+        // Update the manual redirect link
+        document.getElementById('manualRedirect').href = randomGame;
+    </script>
+</body>
+</html>
